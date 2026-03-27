@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LangSplat: 3D Language Field Demo</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fafafa; color: #333; margin: 0; padding: 40px; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px; color: #111; }
+        .author { text-align: center; color: #666; margin-bottom: 40px; }
+        .viewer-box { width: 100%; height: 600px; background: #000; border-radius: 15px; overflow: hidden; margin: 30px 0; position: relative;}
+        .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+        video { width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .section-title { border-left: 5px solid #007bff; padding-left: 15px; margin-top: 50px; font-size: 1.5em; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>LangSplat: 3D Language Field Reconstruction</h1>
+    <p class="author">Author: Your Name | Course: Advanced Computer Vision</p>
+
+    <h2 class="section-title">1. Interactive 3D Scene</h2>
+    <p>直接在浏览器中旋转和缩放我们重建的 3D 桌面场景 (Splatting 渲染)。</p>
+    
+    <iframe src="https://antimatter15.com/splat/?url=https://raw.githubusercontent.com/你的用户名/你的仓库名/main/my_desk.splat" 
+            style="width: 100%; height: 600px; border: none; border-radius: 15px; background: #000;"></iframe>
+
+    <h2 class="section-title">2. Semantic Query Comparison</h2>
+    <div class="video-grid">
+        <div>
+            <p style="text-align: center;"><b>Ground Truth</b></p>
+            <video autoplay loop muted playsinline src="01_Original_GT.mp4"></video>
+        </div>
+        <div>
+            <p style="text-align: center;"><b>Language Highlight (Prompt)</b></p>
+            <video autoplay loop muted playsinline src="03_Highlight_a_book.mp4"></video>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
