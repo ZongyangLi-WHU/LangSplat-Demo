@@ -28,6 +28,13 @@
 <div class="container">
     <h1>LangSplat: 3D 语言场重建与交互系统 </h1>
     <p class="author">Author: 李宗阳 | 位置实践与服务-课程作业展示</p>
+    <div style="background: #f0f7ff; padding: 25px 30px; border-radius: 12px; margin-bottom: 40px; border-left: 5px solid #007bff;">
+        <h3 style="margin-top: 0; color: #0056b3;">🌟 项目简介 (Project Overview)</h3>
+        <p style="color: #444; line-height: 1.7; text-align: justify; font-size: 1.1em;">
+            <strong>LangSplat</strong> 是一个融合了前沿 3D 渲染与大语言模型的人工智能跨模态交互系统。它基于 <strong>3D Gaussian Splatting (3DGS)</strong> 技术实现了真实物理世界的高保真三维重建，并创新性地将 <strong>CLIP 视觉语言大模型</strong> 的空间语义特征“蒸馏”到了 3D 空间中。<br><br>
+            简单来说，不仅为计算机赋予了一双“看清” 3D 世界的眼睛，更赋予了它一个能“听懂”人类语言的大脑。你只需输入自然语言指令（如：“寻找一个蓝色的毛绒玩具”），系统就能在错综复杂的 3D 场景中瞬间锁定，并实现物理级别的精确高亮。
+        </p>
+    </div>
 
     <h2 class="section-title">1. 真实世界原始数据采集 (Raw Video)</h2>
     <p class="desc">这是使用佳能R50微单相机拍摄的原始场景视频，取景于信息学部星湖旁。包含了复杂的桌面杂物、遮挡关系以及不同材质，极具三维重建挑战性。</p>
@@ -97,7 +104,23 @@
     </div>
     
     <video id="interactiveVideo" class="media-box" autoplay loop muted playsinline src="03_Highlight_a_black_cylindrical_camera_lens.mp4"></video>
-
+    <h2 class="section-title">🔮 前景与应用意义 (Future Applications)</h2>
+    <p class="desc">将自然语言理解能力注入 3D 空间，构建真正的“3D 语言场 (3D Language Field)”，是迈向通用人工智能（AGI）的重要一步。本项目所展示的基础跨模态能力，在未来具有极其广阔的现实落地场景：</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; margin-bottom: 40px;">
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">
+            <h4 style="margin-top: 0; color: #007bff; font-size: 1.2em;"> 具身智能 (Embodied AI)</h4>
+            <p style="color: #666; font-size: 0.95em; line-height: 1.6;">未来的家庭或工业机器人不再需要繁琐的三维坐标系编程。主人只需用自然语言下达指令（如“帮我把桌子上的佳能镜头拿过来”），机器人即可利用 LangSplat 构建的 3D 语义场，自主在三维空间中理解、定位并抓取目标。</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">
+            <h4 style="margin-top: 0; color: #28a745; font-size: 1.2em;"> 空间计算与 AR/VR</h4>
+            <p style="color: #666; font-size: 0.95em; line-height: 1.6;">佩戴 AR 眼镜的用户在面对复杂的机房或维修场景时，可以通过语音查询特定零件。系统将在用户的真实视野中，以高亮渲染（3D Splatting）的形式直接标记出物理实体的位置，实现真正的虚实结合向导。</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">
+            <h4 style="margin-top: 0; color: #6f42c1; font-size: 1.2em;"> 应急救援与场景理解</h4>
+            <p style="color: #666; font-size: 0.95em; line-height: 1.6;">在灾区等复杂非结构化地形中，无人机扫过废墟建立 3D 场景后，救援人员只需输入“寻找红色布料”或“寻找生命支持设备”，系统即可秒级在 3D 废墟中进行语义定位，为抢险争取黄金时间。</p>
+        </div>
+    </div>
 </div>
 
 <script>
