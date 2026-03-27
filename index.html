@@ -35,17 +35,30 @@
     <video class="media-box" controls autoplay loop muted playsinline src="raw_video_web.mp4"></video>
 
     <h2 class="section-title">2. 3DGS 底层物理结构 (Interactive 3D Splatting)</h2>
-    <p class="desc">解码了球谐函数特征后的 3D 粒子群。直接在浏览器中旋转和缩放建的 3D 桌面场景。</p>
-    <model-viewer 
-        class="media-box" 
-        style="height: 600px; background: #000;" 
-        src="my_desk.splat" 
-        ar 
-        camera-controls 
-        touch-action="none" 
-        background-color="#000000"
-        interaction-prompt="none">
-    </model-viewer>
+    <p class="desc">解码了球谐函数特征后的 3D 粒子群。直接在浏览器中旋转和缩放重建的 3D 桌面场景。**（💡 提示：鼠标左键旋转，滚轮缩放，右键平移）**</p>
+    
+    <div id="splat-viewer" class="media-box" style="height: 600px; background: #000; position: relative;"></div>
+
+    <script type="module">
+        import * as GaussianSplats3D from 'https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.1/build/gaussian-splats-3d.module.js';
+        
+        const viewer = new GaussianSplats3D.Viewer({
+            'rootElement': document.getElementById('splat-viewer'),
+            'cameraUp': [0, -1, 0], // 控制相机的上方向
+            'initialCameraPosition': [0, 0, 5],
+            'initialCameraLookAt': [0, 0, 0],
+            'halfPrecisionCovariancesOnGPU': true
+        });
+        
+        viewer.addSplatScene('my_desk.splat', {
+            'showLoadingUI': true 
+        }).then(() => {
+            viewer.start();
+        }).catch((err) => {
+            console.error("加载出错了:", err);
+            document.getElementById('splat-viewer').innerHTML = '<p style="color:white; text-align:center; padding-top:280px;"> 加载模型失败，请检查 my_desk.splat 文件是否已上传至 GitHub。</p>';
+        });
+    </script>
 
     <h2 class="section-title">3. 渲染质量对比 (GT vs Vanilla 3DGS)</h2>
     <p class="desc">通过 30,000 次迭代训练后，纯净版 3DGS 的渲染画面与真实拍摄照片达到了高度一致。</p>
