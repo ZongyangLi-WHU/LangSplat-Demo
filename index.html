@@ -34,28 +34,38 @@
     <video class="media-box" controls autoplay loop muted playsinline src="raw_video_web.mp4"></video>
 
     <h2 class="section-title">2. 3DGS 底层物理结构 (Interactive 3D Splatting)</h2>
-    <p class="desc">解码了球谐函数特征后的 3D 粒子群。直接在浏览器中旋转和缩放重建的 3D 桌面场景。**（💡 提示：鼠标左键旋转，滚轮缩放，右键平移）**</p>
+    <p class="desc">解码了球谐函数特征后的 3D 粒子群。直接在浏览器中旋转和缩放我们重建的 3D 桌面场景。**（💡 提示：鼠标左键旋转，滚轮缩放，右键平移）**</p>
     
     <div id="splat-viewer" class="media-box" style="height: 600px; background: #000; position: relative;"></div>
 
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+            "@mkkellogg/gaussian-splats-3d": "https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.1/build/gaussian-splats-3d.module.js"
+        }
+    }
+    </script>
+    
     <script type="module">
-        import * as GaussianSplats3D from 'https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.1/build/gaussian-splats-3d.module.js';
+        import * as THREE from 'three';
+        import * as GaussianSplats3D from '@mkkellogg/gaussian-splats-3d';
         
         const viewer = new GaussianSplats3D.Viewer({
             'rootElement': document.getElementById('splat-viewer'),
-            'cameraUp': [0, -1, 0], // 控制相机的上方向
+            'cameraUp': [0, -1, 0], 
             'initialCameraPosition': [0, 0, 5],
-            'initialCameraLookAt': [0, 0, 0],
-            'halfPrecisionCovariancesOnGPU': true
+            'initialCameraLookAt': [0, 0, 0]
         });
         
+        // 读取同目录下的模型，自带炫酷加载动画
         viewer.addSplatScene('my_desk.splat', {
-            'showLoadingUI': true 
+            'showLoadingUI': true
         }).then(() => {
             viewer.start();
         }).catch((err) => {
             console.error("加载出错了:", err);
-            document.getElementById('splat-viewer').innerHTML = '<p style="color:white; text-align:center; padding-top:280px;"> 加载模型失败，请检查 my_desk.splat 文件是否已上传至 GitHub。</p>';
+            document.getElementById('splat-viewer').innerHTML = '<p style="color:white; text-align:center; padding-top:280px;">⚠️ 加载失败，请确认 my_desk.splat 文件已上传至 GitHub。</p>';
         });
     </script>
 
