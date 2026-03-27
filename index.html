@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>LangSplat: 3D Language Field Demo</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fafafa; color: #333; margin: 0; padding: 40px; }
         .container { max-width: 1000px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
@@ -35,9 +36,16 @@
 
     <h2 class="section-title">2. 3DGS 底层物理结构 (Interactive 3D Splatting)</h2>
     <p class="desc">解码了球谐函数特征后的 3D 粒子群。直接在浏览器中旋转和缩放我们重建的 3D 桌面场景。</p>
-    <iframe class="media-box" style="height: 600px; border: none; background: #000;" 
-            src="https://antimatter15.com/splat/?url=https://ZongyangLi-WHU.github.io/LangSplat-Demo/my_desk.splat">
-    </iframe>
+    <model-viewer 
+        class="media-box" 
+        style="height: 600px; background: #000;" 
+        src="my_desk.splat" 
+        ar 
+        camera-controls 
+        touch-action="none" 
+        background-color="#000000"
+        interaction-prompt="none">
+    </model-viewer>
 
     <h2 class="section-title">3. 渲染质量对比 (GT vs Vanilla 3DGS)</h2>
     <p class="desc">通过 30,000 次迭代训练后，纯净版 3DGS 的渲染画面与真实拍摄照片达到了高度一致。</p>
