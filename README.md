@@ -12,7 +12,7 @@
 
 - **[🖥️ 交互式 3D 网页 Demo (Live Web Demo)](https://zongyangli-whu.github.io/LangSplat-Demo/)** —— *无需安装任何环境，直接在浏览器中体验 3D 漫游与语义高亮！*
 - **[📝 全栈开发技术博客 (Technical Blog)](https://zhuanlan.zhihu.com/p/2020999456775045188)** —— *从数据采集、COLMAP 匹配、模型训练到踩坑 WebGL 部署的万字深度复盘。*
-- **[📺 YouTube 项目展示视频 (Demo Video)](#)** —— *（待更新）完整功能演示与效果对比。*
+- **[📺 YouTube 项目展示视频 (Demo Video)](https://youtu.be/K092dP0SfVg)** —— *（待更新）完整功能演示与效果对比。*
 
 ## 💡 项目亮点 (Highlights)
 
