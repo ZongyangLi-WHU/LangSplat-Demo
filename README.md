@@ -11,9 +11,10 @@ https://zhuanlan.zhihu.com/p/2020999456775045188)
 
 ## 🌟 核心链接 (Core Links)
 
-- **[🖥️ 交互式 3D 网页 Demo (Live Web Demo) ](https://你的用户名.github.io/LangSplat-Demo/)** —— *无需安装任何环境，直接在浏览器中体验 3D 漫游与语义高亮！*
+- **[🖥️ 交互式 3D 网页 Demo (Live Web Demo) ]([https://你的用户名.github.io/LangSplat-Demo/](https://zongyangli-whu.github.io/LangSplat-Demo/))** —— *无需安装任何环境，直接在浏览器中体验 3D 漫游与语义高亮！*
 - **[📺 YouTube 项目展示视频 (Demo Video)](你的YouTube链接)** —— *完整功能演示与效果对比。*
-- **[📝 全栈开发技术博客 (Technical Blog)](你的博客链接)** —— *从数据采集、COLMAP 匹配、模型训练到踩坑 WebGL 部署的万字深度复盘。*
+- **[📝 全栈开发技术博客 (Technical Blog)](基于 3D Gaussian Splatting 与大语言模型的场景语义理解与交互系统 - 知乎用户陽的文章 - 知乎
+https://zhuanlan.zhihu.com/p/2020999456775045188)** —— *从数据采集、COLMAP 匹配、模型训练到踩坑 WebGL 部署的万字深度复盘。*
 
 ## 💡 项目亮点 (Highlights)
 
