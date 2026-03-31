@@ -1,8 +1,9 @@
 # 🚀 LangSplat-Demo: 3D Language Field Reconstruction
 
-![WebGL Supported](https://img.shields.io/badge/WebGL-Supported-brightgreen)
+![WebGL Supported]([https://img.shields.io/badge/WebGL-Supported-brightgreen](https://zongyangli-whu.github.io/LangSplat-Demo/))
 ![3DGS](https://img.shields.io/badge/Algorithm-3D%20Gaussian%20Splatting-blue)
-![Course Project](https://img.shields.io/badge/Status-Final%20Project-orange)
+![Course Project](基于 3D Gaussian Splatting 与大语言模型的场景语义理解与交互系统 - 知乎用户陽的文章 - 知乎
+https://zhuanlan.zhihu.com/p/2020999456775045188)
 
 > **基于 3D Gaussian Splatting 的跨模态交互式语言场重建系统**
 > 
