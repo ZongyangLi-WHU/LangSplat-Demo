@@ -18,7 +18,7 @@
 
 1. **真实场景重建**：跨越室外庞大背景干扰，利用 3D Bounding Box 切割算法精准提取桌面主体模型。
 2. **跨模态语义交互**：结合 CLIP 提取语言特征，支持通过文本 Prompt 在 3D 空间内精准高亮特定物理对象（如："a blue plush toy"）。
-3. **顶会级 Web 部署**：纯手工编写 Python 压缩脚本，将数百兆的 `.ply` 点云转换为极轻量级、强制小端序的 32-byte `.splat` 二进制流，完美兼容 WebGL 引擎渲染。
+3. ** Web 部署**：编写 Python 压缩脚本，将数百兆的 `.ply` 点云转换为极轻量级、强制小端序的 32-byte `.splat` 二进制流，完美兼容 WebGL 引擎渲染。
 
 ## 📂 仓库结构 (Repository Structure)
 
