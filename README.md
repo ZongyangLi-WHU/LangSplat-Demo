@@ -3,7 +3,7 @@
 本仓库用于展示基于 LangSplat 框架的开放词汇三维场景理解实践结果。项目围绕自采桌面多视角场景，完成从 COLMAP 几何初始化、Vanilla 3DGS 预训练，到 SAM / CLIP 语义特征提取、三维语言特征场训练和文本查询可视化的基本流程。
 
 > This repository provides a visualization demo for open-vocabulary 3D scene understanding based on LangSplat.
-
+在线展示网页 https://zongyangli-whu.github.io/LangSplat-Demo/
 ---
 
 ## 1. 项目简介
